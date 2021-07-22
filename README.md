@@ -1,4 +1,4 @@
-About:
+**About**
 
 It is a sample pdf report generator using reportlab, python and a dummy Django website.
 
@@ -6,7 +6,7 @@ Features:
 Heading and Text in report
 Tables in report - Still working on the styling
 
-To run:
+**Software needed**
 
 Recommended Software:
 Python3
@@ -14,7 +14,7 @@ Python3
 Install the necessary packages using:
 pip install -r requirements.txt
 
-Run:
+**To run**
 
 python manage.py runserver
 
