@@ -2,6 +2,9 @@ About:
 
 It is a sample pdf report generator using reportlab, python and a dummy Django website.
 
+Features:
+Heading and Text in report
+Tables in report - Still working on the styling
 
 To run:
 
