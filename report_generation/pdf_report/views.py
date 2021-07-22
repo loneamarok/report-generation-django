@@ -9,6 +9,7 @@ from reportlab.platypus import Table, TableStyle
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import mm, inch
 from reportlab.platypus import Paragraph
+from reportlab.platypus import PageBreak
 
 def report_view(request):
     fileName = 'cistar_report.pdf'
@@ -67,7 +68,6 @@ def report_view(request):
     "Final temp exceeds side reaction 1 temperature onset",
     sample_style_sheet['BodyText']
     )
-
     data = [
         ["A", "B", "C", "D"],
         ["1", "2", "3", "4"],
@@ -88,8 +88,10 @@ def report_view(request):
     elems = []
     for i in range(0, 16):
         elems.append(paragraph[i])
+
+    elems.append(PageBreak())
     elems.append(table)
-    
+
     pdf.build(elems)
 
     pdf_value = buffer.getvalue()
